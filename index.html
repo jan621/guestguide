@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Guest Guide – Rugenparkstrasse</title>
+  <title>Guest Guide – Stephan's Holiday Apartment</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -20,8 +20,7 @@
     .top-favorite-badge { background: #d6005a; }
     .activity-card { transition: transform 0.2s ease, box-shadow 0.2s ease; }
     .activity-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
-    .activity-card.hidden { display: none; }
-    video { border-radius: 16px; width: 100%; }
+    video { border-radius: 12px; width: 100%; }
   </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
@@ -31,12 +30,11 @@
     <div class="max-w-3xl mx-auto px-4">
       <div class="flex items-center justify-between py-4">
         <div>
-          <h1 class="text-xl font-bold text-gray-900">Vacation Apartment</h1>
-          <p class="text-sm text-gray-500">Rugenparkstrasse · Welcome!</p>
+          <h1 class="text-xl font-bold text-gray-900">Stephan's Holiday Apartment</h1>
+          <p class="text-sm text-gray-500">Rugenparkstrasse 18 · Interlaken · Welcome!</p>
         </div>
         <div class="text-3xl">🏡</div>
       </div>
-      <!-- Navigation Tabs -->
       <nav class="flex gap-6">
         <button id="tab-info" class="py-3 text-sm transition-colors tab-active"
           onclick="showPage('info')">ℹ️ Information</button>
@@ -56,26 +54,23 @@
       <!-- Hero Welcome -->
       <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-6 mb-6 text-white">
         <h2 class="text-2xl font-bold mb-1">Welcome! 👋</h2>
-        <p class="text-blue-100 text-sm leading-relaxed">
+        <p class="text-blue-100 text-sm leading-relaxed mb-4">
           We're delighted to have you here. This guide contains everything you need for a wonderful stay. Don't hesitate to reach out if you have any questions.
         </p>
-      </div>
-
-      <!-- Welcome Video -->
-      <div class="bg-white rounded-2xl shadow-sm p-5 mb-4">
-        <div class="flex items-center gap-3 mb-3">
-          <div class="section-icon bg-blue-100">🎬</div>
-          <h3 class="text-lg font-semibold text-gray-900">Welcome Video</h3>
+        <div class="flex flex-col sm:flex-row gap-3">
+          <div class="flex items-center gap-2 text-sm">
+            <span>📍</span>
+            <span class="text-blue-100">Rugenparkstrasse 18, 3800 Interlaken</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm">
+            <span>📞</span>
+            <a href="tel:+41XXXXXXXXX" class="text-white font-medium underline">+41 XX XXX XX XX</a>
+          </div>
         </div>
-        <!-- Replace the src with your actual video URL -->
-        <div class="aspect-video bg-gray-100 rounded-2xl flex items-center justify-center text-gray-400 text-sm">
-          <span>📹 Video placeholder – replace with your video URL</span>
-        </div>
-        <!-- Uncomment and add your video URL:
-        <video controls poster="">
-          <source src="YOUR_VIDEO_URL_HERE" type="video/mp4" />
-        </video>
-        -->
+        <a href="https://maps.google.com/?q=Rugenparkstrasse+18+Interlaken" target="_blank"
+           class="mt-3 inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 transition-colors text-white rounded-xl px-4 py-2 text-sm font-medium">
+          🗺️ Open in Google Maps
+        </a>
       </div>
 
       <!-- Check-in -->
@@ -148,41 +143,6 @@
         </div>
       </div>
 
-      <!-- Address & Contact -->
-      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="section-icon bg-purple-100">📍</div>
-          <h3 class="text-lg font-semibold text-gray-900">Address &amp; Contact</h3>
-        </div>
-        <div class="space-y-3">
-          <div class="flex items-start gap-3">
-            <span class="text-lg">🏠</span>
-            <div>
-              <div class="font-medium text-gray-800">Rugenparkstrasse 14</div>
-              <div class="text-sm text-gray-500">3600 Thun, Switzerland</div>
-            </div>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-lg">📞</span>
-            <div>
-              <div class="text-sm text-gray-400">Host</div>
-              <a href="tel:+41XXXXXXXXX" class="font-medium text-blue-600">+41 XX XXX XX XX</a>
-            </div>
-          </div>
-          <div class="flex items-center gap-3">
-            <span class="text-lg">✉️</span>
-            <div>
-              <div class="text-sm text-gray-400">Email</div>
-              <a href="mailto:kontakt@example.com" class="font-medium text-blue-600">kontakt@example.com</a>
-            </div>
-          </div>
-        </div>
-        <a href="https://maps.google.com/?q=Rugenparkstrasse+14+Thun" target="_blank"
-           class="mt-4 flex items-center justify-center gap-2 bg-blue-600 text-white rounded-xl py-3 text-sm font-medium hover:bg-blue-700 transition-colors">
-          🗺️ Open in Google Maps
-        </a>
-      </div>
-
       <!-- Summertime tip -->
       <div class="bg-amber-50 rounded-2xl p-5 mb-4 border border-amber-100">
         <div class="flex items-center gap-3 mb-3">
@@ -202,10 +162,10 @@
           <div class="section-icon bg-yellow-100">🚗</div>
           <h3 class="text-lg font-semibold text-gray-900">Private Parking</h3>
         </div>
-        <p class="text-sm text-gray-600 leading-relaxed mb-2">
+        <p class="text-sm text-gray-600 leading-relaxed mb-3">
           We offer private parking at our main building <strong>Rugenparkstrasse 18</strong>.
         </p>
-        <div class="bg-yellow-50 rounded-xl p-3 text-sm text-gray-700 mb-2">
+        <div class="bg-yellow-50 rounded-xl p-3 text-sm text-gray-700">
           💰 <strong>CHF 10 per day</strong> · Numbered spots – we'll reserve one for you.
         </div>
       </div>
@@ -216,7 +176,11 @@
           <div class="section-icon bg-indigo-100">🧳</div>
           <h3 class="text-lg font-semibold text-gray-900">Luggage Storage</h3>
         </div>
-        <ul class="space-y-2 text-sm text-gray-700">
+        <!-- Photo of luggage storage entrance -->
+        <img src="assets/luggage-storage-photo.jpg" alt="Luggage storage entrance at Rugenparkstrasse 18"
+             class="w-full h-48 object-cover rounded-xl mb-3"
+             onerror="this.style.display='none'" />
+        <ul class="space-y-2 text-sm text-gray-700 mb-4">
           <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
             <span>🏠</span>
             <span>Storage room at <strong>Rugenparkstrasse 18</strong> – entrance from the main street.</span>
@@ -230,6 +194,11 @@
             <span>Available before check-in and after check-out – self-service.</span>
           </li>
         </ul>
+        <!-- Video walkthrough -->
+        <p class="text-xs text-gray-400 mb-2 font-medium uppercase tracking-wide">Video walkthrough</p>
+        <video controls playsinline preload="none">
+          <source src="assets/luggage-storage.mp4" type="video/mp4" />
+        </video>
       </div>
 
       <!-- Kitchen Rules -->
@@ -247,67 +216,10 @@
             <span>After using the kitchen, wash all items, dry them with the provided towels, and return them to their original place. <strong>Do not leave items to air dry.</strong></span>
           </li>
           <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
-            <span>🍳</span>
-            <span>Only use <strong>plastic utensils</strong> with the frying pan.</span>
-          </li>
-          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
             <span>🧊</span>
-            <span>To store food in the fridge, use the <strong>labelled plastic containers</strong> assigned to your room.</span>
-          </li>
-          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
-            <span>♻️</span>
-            <span>For recycling, refer to the picture above the black bins. Food waste and general rubbish go in the bins <strong>under the sink</strong>.</span>
+            <span>The fridge has <strong>marked areas for each room</strong> – please only use your designated section to store food.</span>
           </li>
         </ul>
-      </div>
-
-      <!-- House Rules -->
-      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="section-icon bg-orange-100">📋</div>
-          <h3 class="text-lg font-semibold text-gray-900">House Rules</h3>
-        </div>
-        <ul class="space-y-3 text-sm text-gray-700">
-          <li class="flex items-start gap-3">
-            <span class="text-base mt-0.5">🚭</span>
-            <span>Smoking is <strong>not permitted</strong> inside. Smoking allowed on the balcony/terrace only.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-base mt-0.5">🐾</span>
-            <span>Pets are welcome with prior agreement.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-base mt-0.5">🔇</span>
-            <span>Please respect quiet hours after <strong>10:00 PM</strong>.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-base mt-0.5">🪟</span>
-            <span>Please close windows when leaving, especially during rain.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-base mt-0.5">💡</span>
-            <span>Switch off lights and heating when leaving.</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Amenities -->
-      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
-        <div class="flex items-center gap-3 mb-4">
-          <div class="section-icon bg-blue-100">🛋️</div>
-          <h3 class="text-lg font-semibold text-gray-900">Amenities</h3>
-        </div>
-        <div class="grid grid-cols-3 gap-2 text-center text-xs text-gray-600">
-          <div class="bg-gray-50 rounded-xl p-3">☕<br/>Coffee machine</div>
-          <div class="bg-gray-50 rounded-xl p-3">🍽️<br/>Dishwasher</div>
-          <div class="bg-gray-50 rounded-xl p-3">🧊<br/>Fridge &amp; freezer</div>
-          <div class="bg-gray-50 rounded-xl p-3">🥘<br/>Stove &amp; oven</div>
-          <div class="bg-gray-50 rounded-xl p-3">📺<br/>Smart TV</div>
-          <div class="bg-gray-50 rounded-xl p-3">🪒<br/>Hair dryer</div>
-          <div class="bg-gray-50 rounded-xl p-3">🛁<br/>Bath &amp; shower</div>
-          <div class="bg-gray-50 rounded-xl p-3">📶<br/>Free WiFi</div>
-          <div class="bg-gray-50 rounded-xl p-3">🧴<br/>Toiletries</div>
-        </div>
       </div>
 
       <!-- Laundry Service -->
@@ -316,6 +228,10 @@
           <div class="section-icon bg-sky-100">🧺</div>
           <h3 class="text-lg font-semibold text-gray-900">Laundry Service</h3>
         </div>
+        <!-- Photo of laundry station -->
+        <img src="assets/laundry-service-photo.jpg" alt="Laundry service station"
+             class="w-full h-48 object-cover rounded-xl mb-3"
+             onerror="this.style.display='none'" />
         <div class="bg-sky-50 rounded-xl p-3 text-sm text-sky-800 font-medium mb-3">
           💰 1 load (up to 5 kg): <strong>CHF 16</strong> (card) / <strong>CHF 15</strong> (cash) / <strong>EUR 16</strong><br/>
           Extra weight: CHF 5/kg · Additional loads: CHF/EUR 10
@@ -331,7 +247,7 @@
           </li>
           <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
             <span class="font-bold text-sky-600 min-w-[20px]">3.</span>
-            <span>Place your laundry bag <strong>by 9:00 AM</strong> on the ground floor next to the staff door (same place as pickup). Put it on the wall.</span>
+            <span>Place your laundry bag <strong>by 9:00 AM</strong> on the ground floor next to the staff door (same spot where you picked it up). Lean it against the wall.</span>
           </li>
           <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
             <span class="font-bold text-sky-600 min-w-[20px]">4.</span>
@@ -348,16 +264,10 @@
         </div>
         <div class="space-y-2 text-sm text-gray-700">
           <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-            <span>🗑️</span><span><strong>Food waste &amp; general rubbish</strong> – bins under the sink</span>
+            <span>🗑️</span><span><strong>General rubbish</strong> – bins under the sink</span>
           </div>
           <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-            <span>🟢</span><span><strong>Glass</strong> – glass container nearby</span>
-          </div>
-          <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-            <span>🔵</span><span><strong>PET / Aluminium</strong> – collection bins (see picture above black bins)</span>
-          </div>
-          <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-            <span>📦</span><span><strong>Cardboard</strong> – flattened and left at designated spot</span>
+            <span>♻️</span><span><strong>Glass, PET &amp; Aluminium</strong> – recycling boxes (see signage in kitchen)</span>
           </div>
         </div>
       </div>
@@ -399,7 +309,7 @@
       <div class="bg-gradient-to-r from-emerald-600 to-teal-700 rounded-2xl p-6 mb-6 text-white">
         <h2 class="text-2xl font-bold mb-1">Activities &amp; Recommendations 🌟</h2>
         <p class="text-emerald-100 text-sm leading-relaxed">
-          Our personal favourites around Thun &amp; the Bernese Oberland – from mountain adventures to cosy restaurants.
+          Our personal favourites around Interlaken &amp; the Bernese Oberland – from mountain adventures to cosy restaurants.
         </p>
       </div>
 
@@ -412,17 +322,14 @@
         <button onclick="filterActivities('recommendations')" id="filter-recommendations" class="filter-btn px-4 py-2 rounded-full text-sm font-medium">🍽️ Recommendations</button>
       </div>
 
-      <!-- ─── CABLEWAYS & TRAINS ─── -->
-
       <!-- TOP FAVORITE: Schilthorn -->
       <div class="activity-card bg-white rounded-2xl shadow-sm mb-4 overflow-hidden border-2 border-pink-500" data-cats="cableways winter summer">
-        <!-- Top Favorite Badge -->
         <div class="top-favorite-badge text-white text-center py-2 text-xs font-bold uppercase tracking-widest">
           ⭐ My Top Favourite
         </div>
         <div class="flex flex-col sm:flex-row">
           <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=600&auto=format&fit=crop&q=80"
-               alt="Schilthorn" class="sm:w-48 h-48 sm:h-auto object-cover rounded-none" />
+               alt="Schilthorn" class="sm:w-48 h-48 sm:h-auto object-cover" />
           <div class="p-5 flex flex-col justify-between flex-1">
             <div>
               <h4 class="font-bold text-gray-900 text-base mb-1">Schilthorn incl. James Bond Brunch</h4>
@@ -433,13 +340,9 @@
                 <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">☀️ Summer</span>
               </div>
               <p class="text-sm text-gray-600 leading-relaxed">
-                At 2970 m above sea level, the Schilthorn is the highest peak in the Pre-Alps. Famous as the James Bond filming location – enjoy the iconic 007 brunch at Piz Gloria with a breathtaking 360° panorama over Eiger, Mönch &amp; Jungfrau.
+                At 2970 m above sea level, the Schilthorn is the highest peak in the Pre-Alps. Famous as a James Bond filming location – enjoy the iconic 007 brunch at Piz Gloria with a breathtaking 360° panorama over Eiger, Mönch &amp; Jungfrau.
               </p>
-              <div class="flex items-center gap-2 text-xs text-gray-400 mt-2">
-                <span>📍 Valley station in Lauterbrunnen</span>
-                <span>·</span>
-                <span>⏱ Full-day trip</span>
-              </div>
+              <div class="text-xs text-gray-400 mt-2">📍 Valley station in Lauterbrunnen · ⏱ Full-day trip</div>
             </div>
             <a href="https://www.schilthorn.ch" target="_blank"
                class="mt-4 block text-center bg-pink-600 text-white rounded-xl py-2.5 text-sm font-bold hover:bg-pink-700 transition-colors">
@@ -449,59 +352,7 @@
         </div>
       </div>
 
-      <!-- Niesen -->
-      <div class="activity-card bg-white rounded-2xl shadow-sm mb-4 overflow-hidden" data-cats="cableways summer winter">
-        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80"
-             alt="Niesen" class="w-full h-48 object-cover" />
-        <div class="p-5">
-          <div class="flex items-start justify-between mb-2">
-            <div>
-              <h4 class="font-bold text-gray-900 text-base">Niesen – Pyramid of Switzerland</h4>
-              <div class="flex flex-wrap gap-1 mt-1">
-                <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full">🚡 Cableway</span>
-                <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">☀️ Summer</span>
-              </div>
-            </div>
-            <span class="text-2xl">⛰️</span>
-          </div>
-          <p class="text-sm text-gray-600 leading-relaxed mb-3">
-            Take the Niesenbahn funicular to 2362 m and enjoy a spectacular 360° panorama over Lake Thun, the Bernese Alps and the Jura. The world's longest staircase (11,674 steps) is a legendary challenge!
-          </p>
-          <div class="text-xs text-gray-400 mb-3">📍 Mülenen, ~20 min by car · ⏱ Half-day trip</div>
-          <a href="https://www.niesen.ch" target="_blank"
-             class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
-            🌐 Website &amp; Tickets
-          </a>
-        </div>
-      </div>
-
-      <!-- BLS Lake Thun boat -->
-      <div class="activity-card bg-white rounded-2xl shadow-sm mb-4 overflow-hidden" data-cats="summer recommendations">
-        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=80"
-             alt="Lake Thun" class="w-full h-48 object-cover" />
-        <div class="p-5">
-          <div class="flex items-start justify-between mb-2">
-            <div>
-              <h4 class="font-bold text-gray-900 text-base">Lake Thun Boat Cruise</h4>
-              <div class="flex flex-wrap gap-1 mt-1">
-                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">🚢 Boat</span>
-                <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">☀️ Summer</span>
-              </div>
-            </div>
-            <span class="text-2xl">⛵</span>
-          </div>
-          <p class="text-sm text-gray-600 leading-relaxed mb-3">
-            Cruise the turquoise waters of Lake Thun with a backdrop of snow-capped Alps. Stop off at Interlaken, Spiez or the Beatushöhlen caves. A perfect lazy afternoon on the water.
-          </p>
-          <div class="text-xs text-gray-400 mb-3">📍 Schifflände Thun · ⏱ 2–6 hours</div>
-          <a href="https://www.bls.ch/de/freizeit/schiff" target="_blank"
-             class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
-            🌐 Timetable &amp; Tickets
-          </a>
-        </div>
-      </div>
-
-      <!-- Harder Kulm / Jungfrau -->
+      <!-- Jungfraujoch -->
       <div class="activity-card bg-white rounded-2xl shadow-sm mb-4 overflow-hidden" data-cats="cableways summer winter">
         <img src="https://images.unsplash.com/photo-1531804055935-76f44d7c3621?w=800&auto=format&fit=crop&q=80"
              alt="Jungfrau" class="w-full h-48 object-cover" />
@@ -518,12 +369,65 @@
             <span class="text-2xl">🏔️</span>
           </div>
           <p class="text-sm text-gray-600 leading-relaxed mb-3">
-            Europe's highest railway station at 3454 m. Marvel at the Aletsch Glacier, the longest glacier in the Alps. A once-in-a-lifetime experience only 1.5 hours from Thun.
+            Europe's highest railway station at 3454 m. Marvel at the Aletsch Glacier – the longest glacier in the Alps. A once-in-a-lifetime experience departing right from Interlaken Ost.
           </p>
           <div class="text-xs text-gray-400 mb-3">📍 Depart from Interlaken Ost · ⏱ Full day</div>
           <a href="https://www.jungfrau.ch" target="_blank"
              class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
             🌐 Website &amp; Tickets
+          </a>
+        </div>
+      </div>
+
+      <!-- Harder Kulm -->
+      <div class="activity-card bg-white rounded-2xl shadow-sm mb-4 overflow-hidden" data-cats="cableways summer winter">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80"
+             alt="Harder Kulm" class="w-full h-48 object-cover" />
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h4 class="font-bold text-gray-900 text-base">Harder Kulm – Top of Interlaken</h4>
+              <div class="flex flex-wrap gap-1 mt-1">
+                <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full">🚡 Funicular</span>
+                <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">☀️ Summer</span>
+                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">❄️ Winter</span>
+              </div>
+            </div>
+            <span class="text-2xl">⛰️</span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-3">
+            Take the funicular from Interlaken up to 1322 m for a stunning panorama of both Lake Thun and Lake Brienz with the Eiger, Mönch and Jungfrau as backdrop. Only 10 min from the apartment!
+          </p>
+          <div class="text-xs text-gray-400 mb-3">📍 Interlaken, 10 min walk · ⏱ Half-day trip</div>
+          <a href="https://www.jungfrau.ch/en-gb/harder-kulm/" target="_blank"
+             class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
+            🌐 Website &amp; Tickets
+          </a>
+        </div>
+      </div>
+
+      <!-- Lake Brienz Boat Cruise -->
+      <div class="activity-card bg-white rounded-2xl shadow-sm mb-4 overflow-hidden" data-cats="summer recommendations">
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=80"
+             alt="Lake Brienz" class="w-full h-48 object-cover" />
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h4 class="font-bold text-gray-900 text-base">Lake Brienz Boat Cruise</h4>
+              <div class="flex flex-wrap gap-1 mt-1">
+                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">🚢 Boat</span>
+                <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">☀️ Summer</span>
+              </div>
+            </div>
+            <span class="text-2xl">⛵</span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-3">
+            Cruise the stunning turquoise Lake Brienz with views of waterfalls and the Alps. Stop at the idyllic village of Iseltwald or ride the historic steam boat. A perfect afternoon on the water.
+          </p>
+          <div class="text-xs text-gray-400 mb-3">📍 Interlaken Ost pier · ⏱ 2–4 hours</div>
+          <a href="https://www.bls.ch/en/leisure/boat-trips" target="_blank"
+             class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
+            🌐 Timetable &amp; Tickets
           </a>
         </div>
       </div>
@@ -535,7 +439,7 @@
         <div class="p-5">
           <div class="flex items-start justify-between mb-2">
             <div>
-              <h4 class="font-bold text-gray-900 text-base">Hiking around Lake Thun</h4>
+              <h4 class="font-bold text-gray-900 text-base">Hiking in the Bernese Oberland</h4>
               <div class="flex flex-wrap gap-1 mt-1">
                 <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">☀️ Summer</span>
                 <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">🥾 Hiking</span>
@@ -544,9 +448,9 @@
             <span class="text-2xl">🥾</span>
           </div>
           <p class="text-sm text-gray-600 leading-relaxed mb-3">
-            Dozens of well-marked hiking trails start right from Thun. Walk the lakeside path to Hilterfingen or climb to the Beatenberg ridge for panoramic views. SwitzerlandMobility has all routes with GPS download.
+            Hundreds of well-marked trails start right from Interlaken. Walk the lakeside path to Iseltwald, hike up to Lauterbrunnen valley, or explore the Niederhorn ridge. SwitzerlandMobility has all routes with GPS download.
           </p>
-          <div class="text-xs text-gray-400 mb-3">📍 Starting point: Thun city centre · ⏱ 2–6 hours</div>
+          <div class="text-xs text-gray-400 mb-3">📍 Starting point: Interlaken · ⏱ 2–6 hours</div>
           <a href="https://www.schweizmobil.ch/en/hiking-in-switzerland.html" target="_blank"
              class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
             🌐 Routes &amp; Maps
@@ -554,14 +458,14 @@
         </div>
       </div>
 
-      <!-- Winter: Skiing Adelboden -->
+      <!-- Winter: Skiing -->
       <div class="activity-card bg-white rounded-2xl shadow-sm mb-4 overflow-hidden" data-cats="winter">
         <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=800&auto=format&fit=crop&q=80"
              alt="Skiing" class="w-full h-48 object-cover" />
         <div class="p-5">
           <div class="flex items-start justify-between mb-2">
             <div>
-              <h4 class="font-bold text-gray-900 text-base">Skiing – Adelboden &amp; Lenk</h4>
+              <h4 class="font-bold text-gray-900 text-base">Skiing – Grindelwald &amp; Wengen</h4>
               <div class="flex flex-wrap gap-1 mt-1">
                 <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">❄️ Winter</span>
                 <span class="text-xs bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded-full">🎿 Ski</span>
@@ -570,88 +474,62 @@
             <span class="text-2xl">🎿</span>
           </div>
           <p class="text-sm text-gray-600 leading-relaxed mb-3">
-            The Adelboden-Lenk ski area offers 210 km of pistes for all levels. Host of the legendary Hahnenkamm race, it's one of the top winter destinations in the Bernese Oberland – just 45 min from Thun.
+            The Jungfrau ski region offers 213 km of pistes for all levels, directly accessible from Interlaken. Grindelwald and Wengen are world-famous ski villages just 30–40 min away by train.
           </p>
-          <div class="text-xs text-gray-400 mb-3">📍 Adelboden, ~45 min by car · ⏱ Full day</div>
-          <a href="https://www.adelboden-lenk.ch" target="_blank"
+          <div class="text-xs text-gray-400 mb-3">📍 Grindelwald / Wengen, ~35 min by train · ⏱ Full day</div>
+          <a href="https://www.jungfrau.ch/en-gb/winter/" target="_blank"
              class="block w-full text-center bg-blue-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-blue-700 transition-colors">
             🌐 Ski Passes &amp; Info
           </a>
         </div>
       </div>
 
-      <!-- Recommendations: Schloss Thun -->
+      <!-- Recommendations: Interlaken Old Town -->
       <div class="activity-card bg-white rounded-2xl shadow-sm mb-4 overflow-hidden" data-cats="recommendations summer">
-        <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&auto=format&fit=crop&q=80"
-             alt="Schloss Thun" class="w-full h-48 object-cover" />
+        <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&auto=format&fit=crop&q=80"
+             alt="Interlaken" class="w-full h-48 object-cover" />
         <div class="p-5">
           <div class="flex items-start justify-between mb-2">
             <div>
-              <h4 class="font-bold text-gray-900 text-base">Thun Castle &amp; Museum</h4>
+              <h4 class="font-bold text-gray-900 text-base">Interlaken Town &amp; Höheweg</h4>
               <div class="flex flex-wrap gap-1 mt-1">
-                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">🏰 Culture</span>
+                <span class="text-xs bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full">🛍️ Shopping</span>
                 <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">☀️ Summer</span>
               </div>
             </div>
-            <span class="text-2xl">🏰</span>
+            <span class="text-2xl">🏘️</span>
           </div>
           <p class="text-sm text-gray-600 leading-relaxed mb-3">
-            The impressive Thun Castle perches above the old town and houses a fascinating museum on the region's history. The views from the towers over Thun and the Alps are breathtaking.
+            Stroll along the famous Höheweg promenade with its perfect alpine panorama. Browse Swiss watch &amp; chocolate shops, enjoy a coffee on the Kursaal terrace, or relax in the Höhematte park right in the centre.
           </p>
-          <div class="text-xs text-gray-400 mb-3">📍 Schlossberg 1, 3600 Thun · ⏱ 1–2 hours</div>
-          <a href="https://www.schlossthun.ch" target="_blank"
-             class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
-            🌐 Opening Hours &amp; Info
-          </a>
-        </div>
-      </div>
-
-      <!-- Recommendations: Restaurant -->
-      <div class="activity-card bg-white rounded-2xl shadow-sm mb-4 overflow-hidden" data-cats="recommendations">
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80"
-             alt="Restaurant" class="w-full h-48 object-cover" />
-        <div class="p-5">
-          <div class="flex items-start justify-between mb-2">
-            <div>
-              <h4 class="font-bold text-gray-900 text-base">Restaurant Schlossberg</h4>
-              <div class="flex flex-wrap gap-1 mt-1">
-                <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">🍽️ Swiss cuisine</span>
-                <span class="text-xs text-gray-400">⭐⭐⭐⭐⭐</span>
-              </div>
-            </div>
-            <span class="text-2xl">🍴</span>
-          </div>
-          <p class="text-sm text-gray-600 leading-relaxed mb-3">
-            Stunning restaurant right next to Thun Castle with panoramic views over Lake Thun. Regional Swiss specialities with a modern twist. Don't miss the Cordon Bleu – it's legendary!
-          </p>
-          <div class="text-xs text-gray-400 mb-3">📍 Schlossberg 1, 3600 Thun · 💰 Mid-range</div>
-          <a href="https://maps.google.com/?q=Restaurant+Schlossberg+Thun" target="_blank"
+          <div class="text-xs text-gray-400 mb-3">📍 Interlaken centre, 5 min walk · ⏱ Anytime</div>
+          <a href="https://maps.google.com/?q=Höheweg+Interlaken" target="_blank"
              class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
             🗺️ Open in Maps
           </a>
         </div>
       </div>
 
-      <!-- Recommendations: Altstadt -->
-      <div class="activity-card bg-white rounded-2xl shadow-sm mb-6 overflow-hidden" data-cats="recommendations summer">
-        <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&auto=format&fit=crop&q=80"
-             alt="Old Town Thun" class="w-full h-48 object-cover" />
+      <!-- Recommendations: Restaurant -->
+      <div class="activity-card bg-white rounded-2xl shadow-sm mb-6 overflow-hidden" data-cats="recommendations">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80"
+             alt="Restaurant" class="w-full h-48 object-cover" />
         <div class="p-5">
           <div class="flex items-start justify-between mb-2">
             <div>
-              <h4 class="font-bold text-gray-900 text-base">Thun Old Town &amp; Shopping</h4>
+              <h4 class="font-bold text-gray-900 text-base">Restaurant El Azteca</h4>
               <div class="flex flex-wrap gap-1 mt-1">
-                <span class="text-xs bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full">🛍️ Shopping</span>
-                <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">☀️ Summer</span>
+                <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">🍽️ Mexican</span>
+                <span class="text-xs text-gray-400">⭐⭐⭐⭐⭐</span>
               </div>
             </div>
-            <span class="text-2xl">🛍️</span>
+            <span class="text-2xl">🍴</span>
           </div>
           <p class="text-sm text-gray-600 leading-relaxed mb-3">
-            Thun's old town is famous for its unique covered walkways on the first floor of buildings – an architectural curiosity! Browse boutiques, bakeries and the lively market square. Saturday market is a must.
+            A local favourite in Interlaken for years. Great atmosphere, generous portions and the best margaritas in town. Perfect after a long day of exploring!
           </p>
-          <div class="text-xs text-gray-400 mb-3">📍 Thun Old Town, 5 min walk · ⏱ Anytime</div>
-          <a href="https://maps.google.com/?q=Altstadt+Thun" target="_blank"
+          <div class="text-xs text-gray-400 mb-3">📍 Interlaken · 💰 Mid-range</div>
+          <a href="https://maps.google.com/?q=El+Azteca+Interlaken" target="_blank"
              class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
             🗺️ Open in Maps
           </a>
@@ -666,8 +544,8 @@
         </div>
         <ul class="space-y-2 text-sm text-amber-900">
           <li class="flex items-start gap-2"><span>🎫</span><span>With the <strong>Swiss Travel Pass</strong>, many journeys are included – great value!</span></li>
-          <li class="flex items-start gap-2"><span>🌅</span><span>Sunset at Strandbad Thun (lido) – absolutely unforgettable.</span></li>
-          <li class="flex items-start gap-2"><span>🛒</span><span>The Saturday market on Marktplatz has fresh local produce.</span></li>
+          <li class="flex items-start gap-2"><span>🌅</span><span>Sunset at the Höhematte park in Interlaken – stunning alpine glow.</span></li>
+          <li class="flex items-start gap-2"><span>🚂</span><span>Interlaken Ost train station is just 10 min walk – direct trains everywhere.</span></li>
           <li class="flex items-start gap-2"><span>🚲</span><span>Rent bikes cheaply with the <strong>PubliBike app</strong> right in town.</span></li>
         </ul>
       </div>
@@ -679,8 +557,8 @@
 
   <!-- Footer -->
   <footer class="max-w-3xl mx-auto px-4 py-8 text-center text-xs text-gray-400">
-    <p>Wishing you a wonderful stay! 🌟</p>
-    <p class="mt-1">Your hosts – always here if you need anything.</p>
+    <p>Wishing you a wonderful stay in Interlaken! 🌟</p>
+    <p class="mt-1">Stephan &amp; Team – always here if you need anything.</p>
   </footer>
 
   <script>
@@ -693,19 +571,13 @@
     }
 
     function filterActivities(cat) {
-      // Update button states
       ['all','summer','winter','cableways','recommendations'].forEach(function(c) {
         var btn = document.getElementById('filter-' + c);
         btn.className = 'filter-btn px-4 py-2 rounded-full text-sm font-medium ' + (c === cat ? 'active' : '');
       });
-      // Show/hide cards
       document.querySelectorAll('.activity-card').forEach(function(card) {
         var cats = card.getAttribute('data-cats') || '';
-        if (cat === 'all' || cats.split(' ').indexOf(cat) !== -1) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
+        card.style.display = (cat === 'all' || cats.split(' ').indexOf(cat) !== -1) ? '' : 'none';
       });
     }
   </script>
