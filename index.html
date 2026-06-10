@@ -78,27 +78,56 @@
         -->
       </div>
 
-      <!-- Check-in / Check-out -->
+      <!-- Check-in -->
       <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
         <div class="flex items-center gap-3 mb-4">
           <div class="section-icon bg-green-100">🔑</div>
-          <h3 class="text-lg font-semibold text-gray-900">Arrival &amp; Departure</h3>
+          <h3 class="text-lg font-semibold text-gray-900">Check-in</h3>
         </div>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="bg-green-50 rounded-xl p-4 text-center">
-            <div class="text-2xl mb-1">🟢</div>
-            <div class="text-xs text-gray-500 uppercase tracking-wide mb-1">Check-in</div>
-            <div class="text-xl font-bold text-green-700">from 3:00 PM</div>
-          </div>
-          <div class="bg-red-50 rounded-xl p-4 text-center">
-            <div class="text-2xl mb-1">🔴</div>
-            <div class="text-xs text-gray-500 uppercase tracking-wide mb-1">Check-out</div>
-            <div class="text-xl font-bold text-red-600">by 11:00 AM</div>
-          </div>
+        <div class="bg-green-50 rounded-xl p-4 text-center mb-4">
+          <div class="text-xs text-gray-500 uppercase tracking-wide mb-1">Check-in from</div>
+          <div class="text-2xl font-bold text-green-700">4:00 PM</div>
         </div>
-        <p class="text-sm text-gray-500 mt-3">
-          📍 You will find the key in the key box at the entrance. You'll receive the code via SMS/email before your arrival.
-        </p>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>⚡</span>
+            <span>If an earlier check-in becomes possible, we'll notify you automatically — there's no need to ask.</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🧳</span>
+            <span>Before check-in, you're welcome to store your luggage on your own (see Luggage Storage below).</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🌙</span>
+            <span>Please let us know if you plan to arrive after <strong>10:00 PM</strong>.</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>📱</span>
+            <span>Once your apartment is ready and the Online Check-in is completed, we'll send you self-check-in instructions with the key code.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Check-out -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-red-100">🚪</div>
+          <h3 class="text-lg font-semibold text-gray-900">Check-out</h3>
+        </div>
+        <div class="bg-red-50 rounded-xl p-4 text-center mb-4">
+          <div class="text-xs text-gray-500 uppercase tracking-wide mb-1">Check-out by</div>
+          <div class="text-2xl font-bold text-red-600">10:00 AM</div>
+        </div>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>⏰</span>
+            <span>Late check-out may be possible subject to availability — please ask us <strong>before</strong> your departure day. Unauthorized late check-outs incur additional fees.</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🗝️</span>
+            <span>When leaving, please place the keys on the desk in the apartment and <strong>send us a photo of the keys</strong>.</span>
+          </li>
+        </ul>
       </div>
 
       <!-- WiFi -->
@@ -154,26 +183,82 @@
         </a>
       </div>
 
-      <!-- Getting Around / Transport -->
+      <!-- Summertime tip -->
+      <div class="bg-amber-50 rounded-2xl p-5 mb-4 border border-amber-100">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="section-icon bg-amber-200">☀️</div>
+          <h3 class="text-lg font-semibold text-amber-800">Summertime Tip</h3>
+        </div>
+        <p class="text-sm text-amber-900 mb-2">In Switzerland we don't use AC. To keep your room cool:</p>
+        <ul class="space-y-2 text-sm text-amber-900">
+          <li class="flex items-start gap-2"><span>🪟</span><span>Keep shutters and windows <strong>closed during the day</strong></span></li>
+          <li class="flex items-start gap-2"><span>🌙</span><span>Open windows and shutters <strong>at night</strong> after turning off the lights</span></li>
+        </ul>
+      </div>
+
+      <!-- Private Parking -->
       <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
         <div class="flex items-center gap-3 mb-4">
-          <div class="section-icon bg-yellow-100">🚌</div>
-          <h3 class="text-lg font-semibold text-gray-900">Getting Around</h3>
+          <div class="section-icon bg-yellow-100">🚗</div>
+          <h3 class="text-lg font-semibold text-gray-900">Private Parking</h3>
         </div>
-        <div class="space-y-3 text-sm text-gray-700">
-          <div class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
-            <span>🚗</span>
-            <span>A free parking space is available directly in front of the building. Please use marked spot <strong>No. X</strong>.</span>
-          </div>
-          <div class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
-            <span>🚌</span>
-            <span>Bus stop <strong>"Rugenparkstrasse"</strong> is a 2-minute walk away – direct connections to Thun city centre.</span>
-          </div>
-          <div class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
-            <span>🚂</span>
-            <span>Thun train station is approx. 10 min by bus or 20 min on foot. Direct trains to Bern, Interlaken &amp; Spiez.</span>
-          </div>
+        <p class="text-sm text-gray-600 leading-relaxed mb-2">
+          We offer private parking at our main building <strong>Rugenparkstrasse 18</strong>.
+        </p>
+        <div class="bg-yellow-50 rounded-xl p-3 text-sm text-gray-700 mb-2">
+          💰 <strong>CHF 10 per day</strong> · Numbered spots – we'll reserve one for you.
         </div>
+      </div>
+
+      <!-- Luggage Storage -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-indigo-100">🧳</div>
+          <h3 class="text-lg font-semibold text-gray-900">Luggage Storage</h3>
+        </div>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🏠</span>
+            <span>Storage room at <strong>Rugenparkstrasse 18</strong> – entrance from the main street.</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🔑</span>
+            <span>Use code <strong class="font-mono text-indigo-700">0118</strong> on the key box. The key inside opens the storage door.</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🕐</span>
+            <span>Available before check-in and after check-out – self-service.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Kitchen Rules -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-red-100">🍳</div>
+          <h3 class="text-lg font-semibold text-gray-900">Kitchen Rules</h3>
+        </div>
+        <div class="bg-orange-50 rounded-xl p-3 text-sm text-orange-800 mb-3 font-medium">
+          ⏰ Kitchen open: <strong>7:00 AM – 10:00 PM</strong>
+        </div>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🧽</span>
+            <span>After using the kitchen, wash all items, dry them with the provided towels, and return them to their original place. <strong>Do not leave items to air dry.</strong></span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🍳</span>
+            <span>Only use <strong>plastic utensils</strong> with the frying pan.</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🧊</span>
+            <span>To store food in the fridge, use the <strong>labelled plastic containers</strong> assigned to your room.</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span>♻️</span>
+            <span>For recycling, refer to the picture above the black bins. Food waste and general rubbish go in the bins <strong>under the sink</strong>.</span>
+          </li>
+        </ul>
       </div>
 
       <!-- House Rules -->
@@ -185,7 +270,7 @@
         <ul class="space-y-3 text-sm text-gray-700">
           <li class="flex items-start gap-3">
             <span class="text-base mt-0.5">🚭</span>
-            <span>Smoking is <strong>not permitted</strong> inside the apartment. Smoking is allowed on the balcony/terrace only.</span>
+            <span>Smoking is <strong>not permitted</strong> inside. Smoking allowed on the balcony/terrace only.</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="text-base mt-0.5">🐾</span>
@@ -196,29 +281,21 @@
             <span>Please respect quiet hours after <strong>10:00 PM</strong>.</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-base mt-0.5">🗑️</span>
-            <span>Please sort waste into the correct bins (general waste, glass, PET, cardboard).</span>
-          </li>
-          <li class="flex items-start gap-3">
             <span class="text-base mt-0.5">🪟</span>
             <span>Please close windows when leaving, especially during rain.</span>
           </li>
           <li class="flex items-start gap-3">
             <span class="text-base mt-0.5">💡</span>
-            <span>Switch off lights and heating when leaving the apartment.</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-base mt-0.5">🧹</span>
-            <span>Please leave the apartment tidy. Final cleaning is included, but please wash dishes and take out the rubbish.</span>
+            <span>Switch off lights and heating when leaving.</span>
           </li>
         </ul>
       </div>
 
-      <!-- Kitchen & Amenities -->
+      <!-- Amenities -->
       <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
         <div class="flex items-center gap-3 mb-4">
-          <div class="section-icon bg-red-100">🍳</div>
-          <h3 class="text-lg font-semibold text-gray-900">Kitchen &amp; Amenities</h3>
+          <div class="section-icon bg-blue-100">🛋️</div>
+          <h3 class="text-lg font-semibold text-gray-900">Amenities</h3>
         </div>
         <div class="grid grid-cols-3 gap-2 text-center text-xs text-gray-600">
           <div class="bg-gray-50 rounded-xl p-3">☕<br/>Coffee machine</div>
@@ -226,12 +303,41 @@
           <div class="bg-gray-50 rounded-xl p-3">🧊<br/>Fridge &amp; freezer</div>
           <div class="bg-gray-50 rounded-xl p-3">🥘<br/>Stove &amp; oven</div>
           <div class="bg-gray-50 rounded-xl p-3">📺<br/>Smart TV</div>
-          <div class="bg-gray-50 rounded-xl p-3">🧺<br/>Washing machine</div>
-          <div class="bg-gray-50 rounded-xl p-3">🌀<br/>Tumble dryer</div>
           <div class="bg-gray-50 rounded-xl p-3">🪒<br/>Hair dryer</div>
           <div class="bg-gray-50 rounded-xl p-3">🛁<br/>Bath &amp; shower</div>
+          <div class="bg-gray-50 rounded-xl p-3">📶<br/>Free WiFi</div>
+          <div class="bg-gray-50 rounded-xl p-3">🧴<br/>Toiletries</div>
         </div>
-        <p class="text-xs text-gray-400 mt-3">* Coffee, tea and basic spices are provided as a welcome gift.</p>
+      </div>
+
+      <!-- Laundry Service -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-sky-100">🧺</div>
+          <h3 class="text-lg font-semibold text-gray-900">Laundry Service</h3>
+        </div>
+        <div class="bg-sky-50 rounded-xl p-3 text-sm text-sky-800 font-medium mb-3">
+          💰 1 load (up to 5 kg): <strong>CHF 16</strong> (card) / <strong>CHF 15</strong> (cash) / <strong>EUR 16</strong><br/>
+          Extra weight: CHF 5/kg · Additional loads: CHF/EUR 10
+        </div>
+        <ol class="space-y-2 text-sm text-gray-700 list-none">
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span class="font-bold text-sky-600 min-w-[20px]">1.</span>
+            <span>Get your laundry bag on the ground floor at the main entrance staircase. Fill in room name, number of bags and date.</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span class="font-bold text-sky-600 min-w-[20px]">2.</span>
+            <span>Take a laundry form and fill it out. Note your preferred payment method (credit card or cash CHF/EUR).</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span class="font-bold text-sky-600 min-w-[20px]">3.</span>
+            <span>Place your laundry bag <strong>by 9:00 AM</strong> on the ground floor next to the staff door (same place as pickup). Put it on the wall.</span>
+          </li>
+          <li class="flex items-start gap-3 bg-gray-50 rounded-xl p-3">
+            <span class="font-bold text-sky-600 min-w-[20px]">4.</span>
+            <span>Once ready and paid, clean laundry will be placed in front of your room door.</span>
+          </li>
+        </ol>
       </div>
 
       <!-- Waste & Recycling -->
@@ -242,16 +348,16 @@
         </div>
         <div class="space-y-2 text-sm text-gray-700">
           <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-            <span>🟤</span><span><strong>General waste</strong> – grey bin at the entrance (Thuner Kehrichtsäcke under the sink)</span>
+            <span>🗑️</span><span><strong>Food waste &amp; general rubbish</strong> – bins under the sink</span>
           </div>
           <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-            <span>🟢</span><span><strong>Glass</strong> – glass container 50m to the left</span>
+            <span>🟢</span><span><strong>Glass</strong> – glass container nearby</span>
           </div>
           <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-            <span>🔵</span><span><strong>PET / Aluminium</strong> – collection bin in the basement</span>
+            <span>🔵</span><span><strong>PET / Aluminium</strong> – collection bins (see picture above black bins)</span>
           </div>
           <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
-            <span>📦</span><span><strong>Cardboard</strong> – flattened and tied, leave at the entrance</span>
+            <span>📦</span><span><strong>Cardboard</strong> – flattened and left at designated spot</span>
           </div>
         </div>
       </div>
