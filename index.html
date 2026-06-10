@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gästemappe – Rugenparkstrasse</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .tab-active { border-bottom: 3px solid #2563eb; color: #2563eb; font-weight: 600; }
+    .tab-inactive { border-bottom: 3px solid transparent; color: #6b7280; }
+    .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .card-hover:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(0,0,0,0.12); }
+    .section-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    [x-cloak] { display: none !important; }
+  </style>
+  <script>
+    function app() {
+      return {
+        page: 'info',
+        setPage(p) { this.page = p; window.scrollTo(0,0); }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-50 min-h-screen" x-data="app()">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <div>
+          <h1 class="text-xl font-bold text-gray-900">Ferienwohnung</h1>
+          <p class="text-sm text-gray-500">Rugenparkstrasse · Willkommen!</p>
+        </div>
+        <div class="text-3xl">🏡</div>
+      </div>
+      <!-- Navigation Tabs -->
+      <nav class="flex gap-6">
+        <button
+          onclick="app().setPage('info')"
+          class="py-3 text-sm transition-colors"
+          id="tab-info"
+          onclick="document.getElementById('page-info').style.display='block'; document.getElementById('page-tips').style.display='none'; document.getElementById('tab-info').className='py-3 text-sm transition-colors tab-active'; document.getElementById('tab-tips').className='py-3 text-sm transition-colors tab-inactive';"
+        >
+          ℹ️ Informationen
+        </button>
+        <button
+          id="tab-tips"
+          class="py-3 text-sm transition-colors tab-inactive"
+          onclick="document.getElementById('page-info').style.display='none'; document.getElementById('page-tips').style.display='block'; document.getElementById('tab-tips').className='py-3 text-sm transition-colors tab-active'; document.getElementById('tab-info').className='py-3 text-sm transition-colors tab-inactive';"
+        >
+          🗺️ Empfehlungen
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    // init tab state
+    document.getElementById('tab-info').className = 'py-3 text-sm transition-colors tab-active';
+  </script>
+
+  <main class="max-w-3xl mx-auto px-4 py-8">
+
+    <!-- ══════════════════════════════════════════════════ -->
+    <!--  PAGE: INFORMATIONEN                               -->
+    <!-- ══════════════════════════════════════════════════ -->
+    <div id="page-info">
+
+      <!-- Hero Welcome -->
+      <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-6 mb-6 text-white">
+        <h2 class="text-2xl font-bold mb-1">Herzlich willkommen! 👋</h2>
+        <p class="text-blue-100 text-sm leading-relaxed">
+          Wir freuen uns, dass ihr da seid. Diese Mappe enthält alles, was ihr für einen angenehmen Aufenthalt braucht. Bei Fragen stehen wir jederzeit zur Verfügung.
+        </p>
+      </div>
+
+      <!-- Check-in / Check-out -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-green-100">🔑</div>
+          <h3 class="text-lg font-semibold text-gray-900">An- &amp; Abreise</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-green-50 rounded-xl p-4 text-center">
+            <div class="text-2xl mb-1">🟢</div>
+            <div class="text-xs text-gray-500 uppercase tracking-wide mb-1">Check-in</div>
+            <div class="text-xl font-bold text-green-700">ab 15:00 Uhr</div>
+          </div>
+          <div class="bg-red-50 rounded-xl p-4 text-center">
+            <div class="text-2xl mb-1">🔴</div>
+            <div class="text-xs text-gray-500 uppercase tracking-wide mb-1">Check-out</div>
+            <div class="text-xl font-bold text-red-600">bis 11:00 Uhr</div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-500 mt-3">
+          📍 Den Schlüssel findet ihr in der Schlüsselbox beim Eingang. Den Code erhaltet ihr per SMS/E-Mail vor der Anreise.
+        </p>
+      </div>
+
+      <!-- WiFi -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-blue-100">📶</div>
+          <h3 class="text-lg font-semibold text-gray-900">WLAN</h3>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-gray-50 rounded-xl p-4">
+            <div class="text-xs text-gray-400 uppercase tracking-wide mb-1">Netzwerkname</div>
+            <div class="font-semibold text-gray-800">Rugenparkstrasse</div>
+          </div>
+          <div class="bg-gray-50 rounded-xl p-4">
+            <div class="text-xs text-gray-400 uppercase tracking-wide mb-1">Passwort</div>
+            <div class="font-semibold text-gray-800 font-mono">Gast2024!</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Adresse & Kontakt -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-purple-100">📍</div>
+          <h3 class="text-lg font-semibold text-gray-900">Adresse &amp; Kontakt</h3>
+        </div>
+        <div class="space-y-3">
+          <div class="flex items-start gap-3">
+            <span class="text-lg">🏠</span>
+            <div>
+              <div class="font-medium text-gray-800">Rugenparkstrasse 14</div>
+              <div class="text-sm text-gray-500">3600 Thun, Schweiz</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-lg">📞</span>
+            <div>
+              <div class="text-sm text-gray-400">Gastgeber</div>
+              <a href="tel:+41XXXXXXXXX" class="font-medium text-blue-600">+41 XX XXX XX XX</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-lg">✉️</span>
+            <div>
+              <div class="text-sm text-gray-400">E-Mail</div>
+              <a href="mailto:kontakt@example.com" class="font-medium text-blue-600">kontakt@example.com</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=Rugenparkstrasse+14+Thun" target="_blank"
+           class="mt-4 flex items-center justify-center gap-2 bg-blue-600 text-white rounded-xl py-3 text-sm font-medium hover:bg-blue-700 transition-colors">
+          🗺️ In Google Maps öffnen
+        </a>
+      </div>
+
+      <!-- Parkplatz -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-yellow-100">🚗</div>
+          <h3 class="text-lg font-semibold text-gray-900">Parkplatz</h3>
+        </div>
+        <p class="text-sm text-gray-600 leading-relaxed">
+          Ein kostenloser Parkplatz steht euch direkt vor dem Haus zur Verfügung. Bitte parkt auf dem markierten Stellplatz Nr. <strong>X</strong>.
+        </p>
+      </div>
+
+      <!-- Hausregeln -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-orange-100">📋</div>
+          <h3 class="text-lg font-semibold text-gray-900">Hausregeln</h3>
+        </div>
+        <ul class="space-y-3 text-sm text-gray-700">
+          <li class="flex items-start gap-3">
+            <span class="text-base mt-0.5">🚭</span>
+            <span>Rauchen ist in der gesamten Wohnung <strong>nicht gestattet</strong>. Rauchen erlaubt nur auf dem Balkon/Terrasse.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-base mt-0.5">🐾</span>
+            <span>Haustiere sind nach vorheriger Absprache willkommen.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-base mt-0.5">🔇</span>
+            <span>Bitte achtet auf die Nachtruhe ab <strong>22:00 Uhr</strong>.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-base mt-0.5">🗑️</span>
+            <span>Abfall bitte in die entsprechenden Behälter (Kehricht, Glas, PET, Karton) entsorgen.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-base mt-0.5">🪟</span>
+            <span>Fenster bitte beim Verlassen schliessen, besonders bei Regen.</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-base mt-0.5">💡</span>
+            <span>Licht und Heizung beim Verlassen ausschalten.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Küche & Ausstattung -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-red-100">🍳</div>
+          <h3 class="text-lg font-semibold text-gray-900">Küche &amp; Ausstattung</h3>
+        </div>
+        <div class="grid grid-cols-3 gap-2 text-center text-xs text-gray-600">
+          <div class="bg-gray-50 rounded-xl p-3">☕<br/>Kaffeemaschine</div>
+          <div class="bg-gray-50 rounded-xl p-3">🍽️<br/>Geschirrspüler</div>
+          <div class="bg-gray-50 rounded-xl p-3">🧊<br/>Kühlschrank</div>
+          <div class="bg-gray-50 rounded-xl p-3">🥘<br/>Herd &amp; Ofen</div>
+          <div class="bg-gray-50 rounded-xl p-3">📺<br/>Smart TV</div>
+          <div class="bg-gray-50 rounded-xl p-3">🧺<br/>Waschmaschine</div>
+          <div class="bg-gray-50 rounded-xl p-3">🌀<br/>Tumbler</div>
+          <div class="bg-gray-50 rounded-xl p-3">♨️<br/>Geschirrspüler</div>
+          <div class="bg-gray-50 rounded-xl p-3">🪒<br/>Haartrockner</div>
+        </div>
+        <p class="text-xs text-gray-400 mt-3">* Kaffee, Tee und Grundgewürze sind als Willkommensgeschenk vorhanden.</p>
+      </div>
+
+      <!-- Abfall & Recycling -->
+      <div class="bg-white rounded-2xl shadow-sm p-6 mb-4 card-hover">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-green-100">♻️</div>
+          <h3 class="text-lg font-semibold text-gray-900">Abfall &amp; Recycling</h3>
+        </div>
+        <div class="space-y-2 text-sm text-gray-700">
+          <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🟤</span><span><strong>Kehricht</strong> – graue Tonne beim Eingang</span>
+          </div>
+          <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🟢</span><span><strong>Glas</strong> – Glascontainer 50m links</span>
+          </div>
+          <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
+            <span>🔵</span><span><strong>PET/Alu</strong> – Sammelbehälter im Keller</span>
+          </div>
+          <div class="flex items-center gap-3 bg-gray-50 rounded-xl p-3">
+            <span>📦</span><span><strong>Karton</strong> – flach gebunden, beim Eingang</span>
+          </div>
+        </div>
+        <p class="text-xs text-gray-400 mt-3">Kehrichtsäcke (Thuner Kehrichtsäcke) findet ihr unter der Spüle.</p>
+      </div>
+
+      <!-- Notfall -->
+      <div class="bg-red-50 rounded-2xl p-6 mb-4 border border-red-100">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="section-icon bg-red-200">🚨</div>
+          <h3 class="text-lg font-semibold text-red-800">Notfallnummern</h3>
+        </div>
+        <div class="grid grid-cols-3 gap-3 text-center text-sm">
+          <a href="tel:117" class="bg-white rounded-xl p-3 shadow-sm">
+            <div class="text-xl mb-1">👮</div>
+            <div class="text-xs text-gray-500">Polizei</div>
+            <div class="font-bold text-red-600">117</div>
+          </a>
+          <a href="tel:118" class="bg-white rounded-xl p-3 shadow-sm">
+            <div class="text-xl mb-1">🚒</div>
+            <div class="text-xs text-gray-500">Feuerwehr</div>
+            <div class="font-bold text-red-600">118</div>
+          </a>
+          <a href="tel:144" class="bg-white rounded-xl p-3 shadow-sm">
+            <div class="text-xl mb-1">🚑</div>
+            <div class="text-xs text-gray-500">Sanität</div>
+            <div class="font-bold text-red-600">144</div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!-- END PAGE INFO -->
+
+
+    <!-- ══════════════════════════════════════════════════ -->
+    <!--  PAGE: EMPFEHLUNGEN                                -->
+    <!-- ══════════════════════════════════════════════════ -->
+    <div id="page-tips" style="display:none;">
+
+      <div class="bg-gradient-to-r from-emerald-600 to-teal-700 rounded-2xl p-6 mb-6 text-white">
+        <h2 class="text-2xl font-bold mb-1">Unsere Empfehlungen 🌟</h2>
+        <p class="text-emerald-100 text-sm leading-relaxed">
+          Unsere persönlichen Lieblingsplätze rund um Thun – von gemütlichen Restaurants bis zu unvergesslichen Ausflügen.
+        </p>
+      </div>
+
+      <!-- Section: Restaurants -->
+      <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">🍽️ Restaurants &amp; Cafés</h3>
+
+      <!-- Card: Restaurant 1 -->
+      <div class="bg-white rounded-2xl shadow-sm mb-4 overflow-hidden card-hover">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80"
+             alt="Restaurant" class="w-full h-48 object-cover" />
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h4 class="font-bold text-gray-900 text-base">Restaurant Schlossberg</h4>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">Schweizer Küche</span>
+                <span class="text-xs text-gray-400">⭐⭐⭐⭐⭐</span>
+              </div>
+            </div>
+            <span class="text-2xl">🏰</span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Traumhaftes Restaurant direkt am Schloss Thun mit Panoramablick über den Thunersee. Die Küche verbindet regionale Schweizer Spezialitäten mit modernen Einflüssen. Besonders empfehlenswert: der Cordon Bleu!
+          </p>
+          <div class="flex items-center gap-2 text-xs text-gray-400 mb-3">
+            <span>📍 Schlossberg 1, 3600 Thun</span>
+            <span>·</span>
+            <span>💰 Mittelklasse</span>
+          </div>
+          <a href="https://www.schlossberg-restaurant.ch" target="_blank"
+             class="block w-full text-center bg-blue-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-blue-700 transition-colors">
+            🌐 Website besuchen
+          </a>
+        </div>
+      </div>
+
+      <!-- Card: Restaurant 2 -->
+      <div class="bg-white rounded-2xl shadow-sm mb-4 overflow-hidden card-hover">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&auto=format&fit=crop&q=80"
+             alt="Cafe" class="w-full h-48 object-cover" />
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h4 class="font-bold text-gray-900 text-base">Café am Marktplatz</h4>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-xs bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">Café &amp; Brunch</span>
+                <span class="text-xs text-gray-400">⭐⭐⭐⭐</span>
+              </div>
+            </div>
+            <span class="text-2xl">☕</span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Charmantes Café mitten in der Thuner Altstadt. Perfekt für einen gemütlichen Brunch oder einen Kaffee nach dem Stadtbummel. Die selbstgemachten Kuchen sind ein Muss!
+          </p>
+          <div class="flex items-center gap-2 text-xs text-gray-400 mb-3">
+            <span>📍 Marktgasse 10, 3600 Thun</span>
+            <span>·</span>
+            <span>💰 Günstig</span>
+          </div>
+          <a href="https://maps.google.com/?q=Cafe+Marktplatz+Thun" target="_blank"
+             class="block w-full text-center bg-blue-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-blue-700 transition-colors">
+            🗺️ In Maps öffnen
+          </a>
+        </div>
+      </div>
+
+      <!-- Card: Restaurant 3 -->
+      <div class="bg-white rounded-2xl shadow-sm mb-6 overflow-hidden card-hover">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&auto=format&fit=crop&q=80"
+             alt="Fine Dining" class="w-full h-48 object-cover" />
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h4 class="font-bold text-gray-900 text-base">Seerestaurant Fischerstube</h4>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">Fisch &amp; Meeresfrüchte</span>
+                <span class="text-xs text-gray-400">⭐⭐⭐⭐⭐</span>
+              </div>
+            </div>
+            <span class="text-2xl">🐟</span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Direkt am Thunersee gelegen bietet dieses Restaurant frischen Fisch aus dem See. Bei schönem Wetter auf der Terrasse sitzen und den Ausblick auf die Berner Alpen geniessen – unvergleichlich!
+          </p>
+          <div class="flex items-center gap-2 text-xs text-gray-400 mb-3">
+            <span>📍 Seepromenade 3, 3600 Thun</span>
+            <span>·</span>
+            <span>💰 Gehoben</span>
+          </div>
+          <a href="https://maps.google.com/?q=Seerestaurant+Thun" target="_blank"
+             class="block w-full text-center bg-blue-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-blue-700 transition-colors">
+            🗺️ In Maps öffnen
+          </a>
+        </div>
+      </div>
+
+      <!-- Section: Aktivitäten -->
+      <h3 class="text-lg font-bold text-gray-800 mb-3 flex items-center gap-2">🎯 Aktivitäten &amp; Ausflüge</h3>
+
+      <!-- Card: Aktivität 1 -->
+      <div class="bg-white rounded-2xl shadow-sm mb-4 overflow-hidden card-hover">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&auto=format&fit=crop&q=80"
+             alt="Berge" class="w-full h-48 object-cover" />
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h4 class="font-bold text-gray-900 text-base">Niesen – König des Thunersees</h4>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Bergausflug</span>
+                <span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">Seilbahn</span>
+              </div>
+            </div>
+            <span class="text-2xl">⛰️</span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Der «Pyramidenberg» der Schweiz! Mit der Niesenbahn auf 2362 m ü.M. fahren und 360°-Panorama über Thunersee, Berner Alpen und Jura geniessen. Ein Ausflug, den man nicht vergisst.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-gray-400 mb-3">
+            <span>📍 Mülenen, ca. 20 Min. mit dem Auto</span>
+            <span>·</span>
+            <span>⏱ Halbtages-Ausflug</span>
+          </div>
+          <a href="https://www.niesen.ch" target="_blank"
+             class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
+            🌐 Website &amp; Tickets
+          </a>
+        </div>
+      </div>
+
+      <!-- Card: Aktivität 2 -->
+      <div class="bg-white rounded-2xl shadow-sm mb-4 overflow-hidden card-hover">
+        <img src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&auto=format&fit=crop&q=80"
+             alt="Schloss Thun" class="w-full h-48 object-cover" />
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h4 class="font-bold text-gray-900 text-base">Schloss Thun &amp; Museum</h4>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">Kultur</span>
+                <span class="text-xs bg-purple-100 text-purple-700 px-2 py-0.5 rounded-full">Museum</span>
+              </div>
+            </div>
+            <span class="text-2xl">🏰</span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Das imposante Schloss Thun thront über der Stadt und beherbergt ein interessantes Museum mit Ausstellungen zur Geschichte der Region. Der Blick von den Türmen über Thun ist atemberaubend.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-gray-400 mb-3">
+            <span>📍 Schlossberg 1, 3600 Thun</span>
+            <span>·</span>
+            <span>⏱ 1–2 Stunden</span>
+          </div>
+          <a href="https://www.schlossthun.ch" target="_blank"
+             class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
+            🌐 Infos &amp; Öffnungszeiten
+          </a>
+        </div>
+      </div>
+
+      <!-- Card: Aktivität 3 -->
+      <div class="bg-white rounded-2xl shadow-sm mb-4 overflow-hidden card-hover">
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&auto=format&fit=crop&q=80"
+             alt="Thunersee" class="w-full h-48 object-cover" />
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h4 class="font-bold text-gray-900 text-base">Schifffahrt auf dem Thunersee</h4>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">Wasser</span>
+                <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">Entspannung</span>
+              </div>
+            </div>
+            <span class="text-2xl">⛵</span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Eine Schifffahrt auf dem türkisblauen Thunersee mit Blick auf die schneebedeckten Alpen ist ein absolutes Highlight. Vom Schiff aus kann man Interlaken, Spiez und Beatushöhlen anfahren.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-gray-400 mb-3">
+            <span>📍 Schifflände Thun</span>
+            <span>·</span>
+            <span>⏱ 2–6 Stunden</span>
+          </div>
+          <a href="https://www.bls.ch/de/freizeit/schiff" target="_blank"
+             class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
+            🌐 Fahrplan &amp; Tickets
+          </a>
+        </div>
+      </div>
+
+      <!-- Card: Aktivität 4 -->
+      <div class="bg-white rounded-2xl shadow-sm mb-6 overflow-hidden card-hover">
+        <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=800&auto=format&fit=crop&q=80"
+             alt="Einkaufen" class="w-full h-48 object-cover" />
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <div>
+              <h4 class="font-bold text-gray-900 text-base">Thuner Altstadt &amp; Shopping</h4>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="text-xs bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full">Shopping</span>
+                <span class="text-xs bg-pink-100 text-pink-700 px-2 py-0.5 rounded-full">Flanieren</span>
+              </div>
+            </div>
+            <span class="text-2xl">🛍️</span>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">
+            Thuns Altstadt besticht durch ihre einzigartigen überdachten Trottoirs auf Hauserhöhe – ein architektonisches Kuriosum! Boutiquen, Bäckereien und das lebhafte Treiben am Marktplatz laden zum Schlendern ein.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-gray-400 mb-3">
+            <span>📍 Altstadt Thun, 5 Min. zu Fuss</span>
+            <span>·</span>
+            <span>⏱ Jederzeit</span>
+          </div>
+          <a href="https://maps.google.com/?q=Altstadt+Thun" target="_blank"
+             class="block w-full text-center bg-emerald-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-emerald-700 transition-colors">
+            🗺️ In Maps öffnen
+          </a>
+        </div>
+      </div>
+
+      <!-- Tipps Box -->
+      <div class="bg-amber-50 rounded-2xl p-5 border border-amber-100">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-xl">💡</span>
+          <h4 class="font-semibold text-amber-800">Insider-Tipps</h4>
+        </div>
+        <ul class="space-y-2 text-sm text-amber-900">
+          <li class="flex items-start gap-2"><span>🎫</span><span>Mit dem <strong>Swiss Travel Pass</strong> sind viele Fahrten inklusive.</span></li>
+          <li class="flex items-start gap-2"><span>🌅</span><span>Sonnenuntergang am Strandbad Thun – einfach unvergesslich!</span></li>
+          <li class="flex items-start gap-2"><span>🛒</span><span>Samstags findet am Marktplatz ein toller Wochenmarkt statt.</span></li>
+          <li class="flex items-start gap-2"><span>🚲</span><span>Fahrräder könnt ihr in der Stadt günstig mieten (PubliBike-App).</span></li>
+        </ul>
+      </div>
+
+    </div>
+    <!-- END PAGE TIPS -->
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="max-w-3xl mx-auto px-4 py-8 text-center text-xs text-gray-400">
+    <p>Wir wünschen euch einen wunderschönen Aufenthalt! 🌟</p>
+    <p class="mt-1">Bei Fragen jederzeit melden. Eure Gastgeber</p>
+  </footer>
+
+</body>
+</html>
